@@ -230,6 +230,9 @@
   .titem .tlab{ font-family:var(--mono); font-size:11px; font-weight:800; color:var(--blue); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px; }
   .titem p{ font-size:15px; color:var(--ink); line-height:1.65; font-weight:600; }
   .titem p.sub{ color:var(--gray); font-size:14px; font-weight:500; margin-top:6px; }
+  .titem ul.sub-list{ list-style:none; margin-top:10px; }
+  .titem ul.sub-list li{ font-size:14px; color:var(--gray); font-weight:500; padding-left:18px; position:relative; margin-bottom:7px; line-height:1.5; }
+  .titem ul.sub-list li::before{ content:'—'; position:absolute; left:0; color:var(--blue); font-weight:800; }
 
   .spotlight{ background:linear-gradient(160deg,#F5F8FD,#EAF0FB); border:1px solid #E2E8F5; padding:36px 30px; border-radius:var(--r); box-shadow:var(--shadow-md); position:relative; overflow:hidden; }
   .spotlight::before{ content:''; position:absolute; top:0; left:0; right:0; height:5px; background:linear-gradient(90deg,var(--yellow),var(--blue)); }
@@ -346,7 +349,7 @@
 <section class="slide" id="cover">
   <div class="cover-eyebrow reveal">CHALLENGE TO BE USEFUL.</div>
   <div class="cover-title reveal">Portfolio</div>
-  <p class="cover-sub reveal"> 데이터로 교육을 설계하는 교육 기획자입니다.</p>
+  <p class="cover-sub reveal"> 산업이 필요로 하는 인재를 교육으로 설계합니다. </p>
   <div class="cover-bottom">
     <div class="cover-name reveal">JANG HANNA · 장한나</div>
   </div>
@@ -364,7 +367,7 @@
       </div>
     </div>
     <div>
-      <div class="about2-headline"> 산업이 필요로 하는 인재를 교육으로 설계합니다.</div>
+      <div class="about2-headline"> 이해를 기반으로 설계하는 교육 기획자, 장한나입니다.</div>
 
       <div class="about2-cols">
         <div>
@@ -401,7 +404,7 @@
 
       <div class="about2-principles">
         <div class="about2-h">About me — 일하는 기준 3가지</div>
-        <div class="principle"><span class="pnum">1</span><b>교육은 산업을 담아야 한다</b><p>'기업이 필요로 하는 기술과 현장의 변화를 교육과정에 담아냅니다.</p></div>
+        <div class="principle"><span class="pnum">1</span><b>교육은 산업을 담아야 한다 </b><p>'좋아 보인다'는 감이 아닌, 데이터로 정의하고 결과를 숫자로 증명합니다.</p></div>
         <div class="principle"><span class="pnum">2</span><b>배움은 실무로 이어져야 한다</b><p>교육의 끝이 수료가 아닌, 현업에서 활용되는 경험을 설계합니다.</p></div>
         <div class="principle"><span class="pnum">3</span><b>당연한 것을 다시 묻는다</b><p>'원래 그런 것'이라 넘어가던 지점을 다시 들여다봅니다.</p></div>
       </div>
@@ -431,7 +434,7 @@
       <div class="proj-title">자체 세일즈 채널 구축</div>
       <div class="overview-box">
         <div class="overview-lab">[Overview]</div>
-        <p class="overview-txt">국비지원 구독형 교육 서비스의 세일즈 창구가 콜 세일즈와 에이전시뿐이었던 상황에서, 자체 홈페이지와 제안 자동화 시스템을 처음부터 기획·개발</p>
+        <p class="overview-txt">국비지원 구독형 교육 서비스의 세일즈 창구가 콜 세일즈와 에이전시뿐이었던 상황에서, 자체 홈페이지와 제안 자동화 시스템을 처음부터 기획·개발했습니다.</p>
       </div>
     </div>
     <div class="proj-num-big">01</div>
@@ -452,13 +455,20 @@
     <div class="timeline">
       <div class="titem">
         <div class="tlab">Why</div>
-      <p>자체 리드 창구, 대응 프로세스 부재</p>
-      <p class="sub">서비스를 소개할 홈페이지가 없어 잠재 고객이 가격과 혜택을 직접 확인할 곳이 없었고, <br> 상담이 연결돼도 맞춤 제안 자료 없이 정가 상품 설명서만 발송하다 보니 계약 성사율이 낮은 문제 발견했습니다.</p>
+      <p>자체 리드 없이 에이전시·콜 세일즈에만 의존</p>
+      <ul class="sub-list">
+        <li>서비스 소개 홈페이지 부재로 가격·혜택 확인 창구 자체가 없음</li>
+        <li>맞춤 제안 자료 없이 정가 설명서만 발송 → 낮은 계약 성사율</li>
+      </ul>
       </div>
       <div class="titem">
         <div class="tlab">How</div>
       <p>홈페이지와 제안서 자동화 봇을 직접 기획·개발</p>
-      <p class="sub">바이브 코딩으로 서비스 소개 홈페이지를 직접 제작·배포하고, 기업 니즈를 입력하면 맞춤 교육 로드맵과 컨설팅 문서가 자동 생성되는 제안서 봇을 개발해 상담부터 제안까지 이어지는 세일즈 흐름 전체를 새로 설계</p>
+      <ul class="sub-list">
+        <li>바이브 코딩으로 서비스 소개 홈페이지 직접 제작·배포</li>
+        <li>니즈 입력 시 교육 로드맵·컨설팅 문서 자동 생성 제안서 봇 개발</li>
+        <li>상담부터 제안까지 이어지는 세일즈 흐름 전체 재설계</li>
+      </ul>
       </div>
     </div>
 
@@ -471,7 +481,7 @@
         <span>제안서 자동화</span>
         <span>채널 홍보</span>
       </div>
-      <div class="stake">교육 세일즈는 체계적인 커리큘럼과 콘텐츠의 퀄리티에서 시작된다. </div>
+      <div class="stake">세일즈는 인력이 아닌 구조의 문제</div>
     </div>
   </div>
 
@@ -487,10 +497,10 @@
   <div class="proj-cover-grid reveal">
     <div>
       <div class="eyebrow" style="color:#C7CFE0;">PROJECT 02</div>
-      <div class="proj-title">탐색 혼선을 자체 개발로 해결</div>
+      <div class="proj-title">탐색 혼선을 자체 개발로 해결하다</div>
       <div class="overview-box">
         <div class="overview-lab">[Overview]</div>
-        <p class="overview-txt">3,000개 넘는 강의가 담긴 구독형 아카이브에서, 한 강의가 30여 개 클립으로 쪼개져 노출되며 생긴 학습자 혼란을 자체 개발한 추천 시스템과 강의 리스트 홈페이지로 해결했습니다.</p>
+        <p class="overview-txt">3,000개 넘는 강의가 담긴 구독형 아카이브에서, 한 강의가 30여 개 클립으로 쪼개져 노출되며 생긴 학습자 혼란을 자체 개발한 추천 시스템과 홈페이지로 해결했습니다.</p>
       </div>
     </div>
     <div class="proj-num-big">02</div>
@@ -512,12 +522,19 @@
       <div class="titem">
         <div class="tlab">Why</div>
       <p>한 강의가 30여 개 클립으로 쪼개져 노출, 학습자 혼란</p>
-      <p class="sub">같은 강의인데도 클립마다 별도 항목으로 보여 학습자가 여러 개의 다른 강의로 착각했고, "강의를 못 찾겠다"는 CS 문의가 매주 반복됐습니다. <br> 원인은 규정으로인해 쪼개져 있는 컨텐츠가 수강생 입장에서는 모두 같은 강의로 보여진다는 것</p>
+      <ul class="sub-list">
+        <li>클립마다 별도 항목 노출 → 같은 강의를 여러 개로 착각</li>
+        <li>"강의를 못 찾겠다"는 CS 문의 매주 반복</li>
+        <li>근본 원인은 콘텐츠가 아닌 탐색 경로 자체의 부재</li>
+      </ul>
       </div>
       <div class="titem">
         <div class="tlab">How</div>
       <p>추천 시스템과 강의 전용 홈페이지 자체 개발</p>
-      <p class="sub">직무와 니즈를 입력하면 어울리는 강의 3개를 뽑아 보여주는 추천 시스템을 바이브 코딩으로 직접 구축 <br> 클립 단위로 흩어져 있던 강의를 순서대로 이어볼 수 있는 강의 리스트 홈페이지를 별도로 만들어 배포했습니다.</p>
+      <ul class="sub-list">
+        <li>직무·니즈 입력 시 강의 3개 추천 시스템, 바이브 코딩으로 직접 구축</li>
+        <li>클립 단위 강의를 순서대로 이어보는 강의 리스트 홈페이지 별도 제작·배포</li>
+      </ul>
       </div>
     </div>
 
@@ -571,12 +588,19 @@
       <div class="titem">
         <div class="tlab">Why</div>
       <p>학교 밖 청소년, 또래와 소통할 창구 부재</p>
-      <p class="sub">학업을 중단한 이후 또래 관계가 끊기면서 소속감을 쌓을 기회 자체가 사라졌습니다. 청소년 3명을 직접 인터뷰한 결과, 온라인에서 자유롭게 소통하고 싶은 니즈와 실제로 만나서 활동해보고 싶은 오프라인 체험 니즈가 동시에 크다는 걸 확인했습니다.</p>
+      <ul class="sub-list">
+        <li>학업 중단 이후 또래 관계 단절, 소속감 형성 기회 상실</li>
+        <li>청소년 3명 인터뷰 → 온라인 자유 소통 + 오프라인 체험 니즈 동시 확인</li>
+      </ul>
       </div>
       <div class="titem">
         <div class="tlab">How</div>
       <p>자율성과 안전을 함께 설계한 커뮤니티 정책</p>
-      <p class="sub">타 플랫폼의 장단점을 분석해 청소년 페르소나에 맞는 커뮤니티 정책을 세우고, 온라인에서는 별명으로 자유롭게 소통하되 실제 오프라인 모임은 실명으로 참여하도록 이원화 <br> 매일 참여할 수 있는 데일리 미션 이벤트를 기획해 방문 유도, 자기주도적 프로그램 기획</p>
+      <ul class="sub-list">
+        <li>타 플랫폼 장단점 분석 → 청소년 페르소나 기반 커뮤니티 정책 수립</li>
+        <li>온라인 별명 소통 + 오프라인 실명 참여로 이원화</li>
+        <li>데일리 미션 이벤트 기획으로 꾸준한 참여 유도</li>
+      </ul>
       </div>
     </div>
 
@@ -594,8 +618,8 @@
   </div>
 
   <div class="proj-gallery reveal">
-    <div class="photo-slot"><img src="https://techforimpact.io/_next/image?url=https%3A%2F%2Fs3.ap-northeast-2.amazonaws.com%2Ftechforimpact-backend-dev-storage%2F4f304b8e-ecc4-4157-9ec2-d07f68ac1f1f_1768291520981.png&w=640&q=100" alt="유스보이스 청소년 커뮤니티 앱 youth-it"><span class="cap">청소년 커뮤니티 앱 'youth-it'</span></div>
-    <div class="photo-slot shot"><img src="https://raw.githubusercontent.com/Janghanna0/portfolio/main/2026-07-29%2010%2050%2051.png" alt="습관 인증·루틴 피드 화면"><span class="urlbar"></span><span class="cap">습관 인증·루틴 피드 화면</span></div>
+    <div class="photo-slot" style="max-width:280px; margin:0 auto;"><img src="https://techforimpact.io/_next/image?url=https%3A%2F%2Fs3.ap-northeast-2.amazonaws.com%2Ftechforimpact-backend-dev-storage%2F4f304b8e-ecc4-4157-9ec2-d07f68ac1f1f_1768291520981.png&w=640&q=100" alt="유스보이스 청소년 커뮤니티 앱 youth-it"><span class="cap">청소년 커뮤니티 앱 'youth-it'</span></div>
+    <div class="photo-slot shot" style="max-width:280px; margin:0 auto;"><img src="https://raw.githubusercontent.com/Janghanna0/portfolio/main/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202026-07-29%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.10.34.png" alt="유스잇 서비스 화면"><span class="urlbar"></span><span class="cap">유스잇 서비스 화면</span></div>
   </div>
 
 </section>
@@ -635,7 +659,10 @@
       <div class="titem">
         <div class="tlab">How</div>
       <p>설문 진입 흐름 재설계</p>
-      <p class="sub">A/B 테스트로 질문형 제목의 반응 우위 확인, 도입부 질문 및 흥미 유도 후 자연스럽게 설문 문항으로 연결해 설문 완주 유도</p>
+      <ul class="sub-list">
+        <li>A/B 테스트로 질문형 제목의 반응 우위 확인</li>
+        <li>도입부에서 질문·흥미 유도 후 자연스럽게 설문 문항으로 연결</li>
+      </ul>
       </div>
     </div>
 
