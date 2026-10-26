@@ -1508,37 +1508,34 @@
   <span class="proj-tag">Project 04 · 요기요 역기획 · 요기사주</span><span class="pgn"></span>
 </section>
  
-<section class="slide" aria-label="요기사주 비즈니스 모델과 비용 최적화">
+<section class="slide" aria-label="요기사주 비즈니스 모델과 기대 효과">
   <div class="inner">
-    <p class="sec"><span class="n">09</span>비즈니스 모델과 AI 비용 최적화</p>
-    <div class="body c2">
-      <div style="display:grid;gap:1.2cqw;align-content:start;">
-        <div class="card y"><h4>수익 구조</h4>
+    <p class="sec"><span class="n">09</span>비즈니스 모델과 기대 효과</p>
+    <div class="body" style="grid-template-rows:auto auto;align-content:start;gap:1.8cqw;">
+      <div class="c2" style="display:grid;gap:2cqw;">
+        <div class="card y">
+          <h4>수익 구조</h4>
           <p>콘텐츠 이용은 무료로 두고, 트래픽이 실제 거래로 이어지는 지점에서만 수익을 얻습니다.</p>
-          <p style="margin-top:.6cqw;">진단 결과와 맞는 매장에만 광고 슬롯으로 노출 우선순위를 줍니다. 예를 들어 화(火) 기운이 부족하면 매운 음식 매장이 먼저 보입니다.</p>
+          <p style="margin-top:.5cqw;">진단 결과와 맞는 매장에만 광고 슬롯 노출 우선순위를 줍니다. (예: 화(火) 기운 부족 → 매운 음식 매장 우선)</p>
         </div>
-        <div class="card"><h4>AI 호출 비용</h4><p>1회 약 1,200 토큰 (입력 약 800 + 출력 약 400). 이용자가 늘면 비용이 함께 늘어나는 위험이 있습니다.</p></div>
+        <div>
+          <p class="chart-t">AI 호출 비용 방어 (1회 약 1,200 토큰 · 예상 절감)</p>
+          <div class="bars" style="gap:.9cqw;">
+            <div class="bar hl2" style="grid-template-columns:15cqw 1fr 5cqw;"><span><b>1단계</b> 사전 생성</span><span class="track"><i style="width:70%"></i></span><span class="val">70%</span></div>
+            <div class="bar hl2" style="grid-template-columns:15cqw 1fr 5cqw;"><span><b>2단계</b> 인메모리 캐싱</span><span class="track"><i style="width:90%"></i></span><span class="val">90%+</span></div>
+            <div class="bar hl2" style="grid-template-columns:15cqw 1fr 5cqw;"><span><b>3단계</b> 단체 주문 통합</span><span class="track"><i style="width:80%"></i></span><span class="val">80%</span></div>
+          </div>
+          <p class="note dim" style="margin-top:.6cqw;font-size:.82em;">호출 절감 · 피크타임 서버 부하 방어 · 단체 주문 토큰 절감</p>
+        </div>
       </div>
       <div>
-        <p class="chart-t">비용 방어 3단계 (예상 절감)</p>
-        <div class="bars" style="gap:1.3cqw;">
-          <div class="bar hl2" style="grid-template-columns:100%;gap:.3cqw;"><span><b>1단계 사전 생성</b> 오행 조합과 날씨 변수의 추천 문장을 미리 생성해 저장 · 호출 70% 절감</span><span class="track"><i style="width:70%"></i></span></div>
-          <div class="bar hl2" style="grid-template-columns:100%;gap:.3cqw;"><span><b>2단계 인메모리 캐싱</b> 같은 체질·지역 날씨 접속자에게 저장 결과를 즉시 반환 · 피크타임 서버 부하 90% 이상 방어</span><span class="track"><i style="width:90%"></i></span></div>
-          <div class="bar hl2" style="grid-template-columns:100%;gap:.3cqw;"><span><b>3단계 단체 주문</b> 팀원 전체의 교집합 데이터만 1회 LLM에 질문 · 토큰 80% 절감</span><span class="track"><i style="width:80%"></i></span></div>
+        <span class="lab">기대 효과</span>
+        <div class="c3" style="display:grid;gap:1.4cqw;">
+          <div class="card y"><h4>MAU 하락 방어</h4><p style="font-size:.92em;">비식사 시간대(08:00~10:00) 데일리 콘텐츠 푸시로, 배달 니즈가 없을 때도 앱을 여는 방문 명분을 만듭니다.</p></div>
+          <div class="card y"><h4>가격 경쟁 탈피</h4><p style="font-size:.92em;">체질 × 주문 이력 결합 데이터로, 따라 하기 어려운 재방문 동기를 만듭니다.</p></div>
+          <div class="card y"><h4>고객 획득 비용 절감</h4><p style="font-size:.92em;">카드뉴스 공유와 그룹 오더의 다인 전파로 오가닉 신규 유입을 늘립니다.</p></div>
         </div>
       </div>
-    </div>
-  </div>
-  <span class="proj-tag">Project 04 · 요기요 역기획 · 요기사주</span><span class="pgn"></span>
-</section>
- 
-<section class="slide" aria-label="요기사주 기대 효과">
-  <div class="inner">
-    <p class="sec"><span class="n">10</span>기대 효과</p>
-    <div class="body c3" style="align-content:start;flex:none;">
-      <div class="card y"><h4>MAU 하락 방어와 리텐션 루틴</h4><p>비식사 시간대(08:00~10:00)의 데일리 콘텐츠 푸시로, 배달 니즈가 없을 때도 앱을 여는 일상적 방문 명분을 만듭니다.</p></div>
-      <div class="card y"><h4>가격 경쟁에서 벗어난 장벽</h4><p>무료 배달·할인 쿠폰처럼 따라 하기 쉬운 프로모션 대신, 체질 × 주문 이력 결합 데이터로 재방문 동기를 만듭니다.</p></div>
-      <div class="card y"><h4>신규 고객 획득 비용 절감</h4><p>카드뉴스 공유와 그룹 오더의 다인 전파로, 큰 마케팅 비용 없이 신규 설치와 가입을 늘리는 오가닉 루프를 만듭니다.</p></div>
     </div>
   </div>
   <span class="proj-tag">Project 04 · 요기요 역기획 · 요기사주</span><span class="pgn"></span>
