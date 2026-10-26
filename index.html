@@ -692,50 +692,11 @@
     padding: 12px;
   }
 }
-/* 텃밭닥터: 이미지 바깥 여백 자르기 */
-.slide[aria-label="텃밭닥터 해결 설계"] .body.c2 {
-  grid-template-columns: 0.85fr 1.15fr;
-}
-
-.slide[aria-label="텃밭닥터 해결 설계"] .body.c2 > .c3 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.8cqw;
-  min-height: 0;
-}
-
-.slide[aria-label="텃밭닥터 해결 설계"] .c3 figure {
-  min-width: 0;
-  min-height: 0;
-  display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
-  overflow: hidden;
-}
-
-.slide[aria-label="텃밭닥터 해결 설계"] .c3 figure img {
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  max-height: none;
-  flex: none;
-  object-fit: contain;
-  transform: scale(1.55);
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-}
-
-/* 아카이빙: 원본 여백이 더 커서 추가 확대 */
-.slide[aria-label="텃밭닥터 해결 설계"] .c3 figure:nth-child(3) img {
-  transform: scale(1.85);
-}
-
-.slide[aria-label="텃밭닥터 해결 설계"] .c3 figcaption {
-  margin-top: 0.5cqw;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
+/* 텃밭닥터: 한 장짜리 화면 이미지 + 순서대로 설명 */
+.tdoc-one{ min-width:0; min-height:0; display:flex; flex-direction:column; justify-content:center; }
+.tdoc-one img{ width:100%; height:auto; border:0; background:none; border-radius:0; flex:none; }
+.tdoc-one .caps{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:.6cqw; text-align:center; font-weight:900; font-size:1.05em; }
+.tdoc-one .caps span{ justify-self:center; padding:.1cqw 1.2cqw; border-radius:999px; background:var(--y); }
 </style>
 </head>
 <body>
@@ -1326,10 +1287,10 @@
         <div class="pair"><div class="p"><b>AS-IS</b>무분별한 이미지 분석 / 작물 직접 선택 / 진단 후 소통 단절</div><div class="s"><b>TO-BE</b>사진 한 장으로 작물 자동 인식, 챗봇이 추가 질문 / 키우는 과정을 일기처럼 기록 / 성장 기록과 대화 자동 저장 / 물·영양제 주기 푸시 알림</div></div>
         <div class="card y"><h4>경쟁 서비스와 다른 점</h4><p>작물 자동 인식, 유효성 검증, 대화형 상담이 하나의 진단 플로우로 이어지게 설계해 구조적인 이탈 방지 장치를 만들었습니다.</p></div>
       </div>
-      <div class="c3" style="display:grid;gap:1cqw;">
-        <figure><img src="https://janghanna0.github.io/portfolio/chat.png" alt="텃밭닥터 AI 챗봇 상담 화면"><figcaption>챗봇</figcaption></figure>
-        <figure><img src="https://janghanna0.github.io/portfolio/dari.png" alt="텃밭닥터 식물 생육일지 화면"><figcaption>생육일지</figcaption></figure>
-        <figure><img src="https://janghanna0.github.io/portfolio/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202026-10-26%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%205.29.35.png" alt="텃밭닥터 달력형 아카이빙 화면"><figcaption>아카이빙</figcaption></figure>
+        <div class="tdoc-one">
+        <img src="https://janghanna0.github.io/portfolio/doctor.png" alt="텃밭닥터 AI 챗봇, 생육일지 쓰기, 달력형 아카이빙 화면">
+        <div class="caps"><span>챗봇</span><span>생육일지</span><span>아카이빙</span></div>
+      </div>
       </div>
     </div>
   </div>
