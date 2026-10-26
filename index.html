@@ -444,6 +444,158 @@
   font-size: 1.12em;
   line-height: 1.7;
 }
+  
+/* LMS 문제 분석 통합 페이지 */
+.lms-analysis {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1.5cqw;
+  margin-top: 1.4cqw;
+}
+
+.lms-analysis > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1cqw;
+}
+
+.lms-analysis .analysis-block {
+  min-width: 0;
+}
+
+.lms-analysis .lab {
+  margin-bottom: 0.5cqw;
+}
+
+.lms-analysis .question-list {
+  display: grid;
+  gap: 0.5cqw;
+}
+
+.lms-analysis .question-list > div {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7cqw;
+  padding: 0.5cqw 0.8cqw;
+  background: var(--paper);
+  border-radius: 5px;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.lms-analysis .question-list b {
+  color: var(--y-deep);
+  flex-shrink: 0;
+}
+
+.lms-analysis .bars {
+  gap: 0.65cqw;
+}
+
+.lms-analysis .bar {
+  grid-template-columns: 8.5cqw minmax(0, 1fr) 2.5cqw;
+  gap: 0.6cqw;
+  font-size: 0.82em;
+}
+
+.lms-analysis .bar .track {
+  height: 1cqw;
+}
+
+.lms-analysis .mini-kpi {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5cqw;
+}
+
+.lms-analysis .mini-kpi span {
+  background: var(--y-soft);
+  border-radius: 5px;
+  padding: 0.7cqw 0.4cqw;
+  text-align: center;
+  font-size: 0.78em;
+}
+
+.lms-analysis .mini-kpi b {
+  display: block;
+  font-size: 1.25em;
+}
+
+.lms-analysis .analysis-right .card {
+  padding: 1cqw 1.2cqw;
+}
+
+.lms-analysis .analysis-right .dots {
+  font-size: 0.88em;
+  line-height: 1.65;
+}
+
+.lms-analysis .analysis-right .dots li + li {
+  margin-top: 0.35cqw;
+}
+
+.lms-analysis .chips {
+  margin-top: 0.4cqw;
+  gap: 0.5cqw;
+}
+
+.lms-analysis .chips span {
+  font-size: 0.78em;
+}
+
+.lms-analysis .insight-box {
+  background: var(--y-soft);
+  border-radius: 8px;
+  padding: 1cqw 1.2cqw;
+}
+
+.lms-analysis .insight-box h3 {
+  font-size: 1em;
+  font-weight: 900;
+  margin-bottom: 0.2cqw;
+}
+
+.lms-analysis .insight-box p {
+  font-size: 0.88em;
+  line-height: 1.55;
+  margin-bottom: 0.65cqw;
+}
+
+@media (max-width: 820px) {
+  .lms-analysis {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .lms-analysis > div {
+    gap: 14px;
+  }
+
+  .lms-analysis .question-list > div {
+    padding: 8px 10px;
+  }
+
+  .lms-analysis .bar {
+    grid-template-columns: 90px minmax(0, 1fr) 30px;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .lms-analysis .bar .track {
+    height: 10px;
+  }
+
+  .lms-analysis .mini-kpi span {
+    padding: 8px 4px;
+  }
+
+  .lms-analysis .analysis-right .card,
+  .lms-analysis .insight-box {
+    padding: 12px;
+  }
+}
+
 
 </style>
 </head>
@@ -766,61 +918,105 @@
   <span class="proj-tag">Project 02 · 데이원컴퍼니 신규 LMS</span><span class="pgn"></span>
 </section>
 
-<section class="slide" aria-label="LMS 고민 포인트와 해결을 위한 노력">
+
+<section class="slide" aria-label="LMS 문제 분석과 인사이트">
   <div class="inner">
-    <p class="sec"><span class="n">03</span>고민 포인트와 해결을 위한 노력</p>
-    <div class="body" style="grid-template-columns:1fr 1.5fr;">
-      <div style="display:grid;gap:1.1cqw;align-content:start;">
-        <span class="lab" style="justify-self:start;">고민 포인트</span>
-        <div class="card y"><h4>Q1</h4><p>경쟁사와 차별점을 줄 수 있는 서비스는 무엇일까?</p></div>
-        <div class="card y"><h4>Q2</h4><p>3,000개의 콘텐츠를 편하게 볼 수 있게 하는 방법은 무엇일까?</p></div>
-        <div class="card y"><h4>Q3</h4><p>사람들은 왜 이탈할까?</p></div>
-      </div>
-      <div style="display:grid;gap:1.4cqw;align-content:start;">
-        <span class="lab" style="justify-self:start;">해결을 위한 노력</span>
-        <div class="card"><h4>CS 데이터 분석과 교담자(교육 담당자) 인터뷰</h4>
-          <ul class="dots">
-            <li>3,000개가 카테고리별로 나뉘어 있지 않아 보기 어렵다, UI가 복잡하다 </li>
-            <li>뭘 봐야 할지 모르겠고, 영상을 고르다 지친다</li>
-            <li>교육 내용이 어려워 검색하러 나갔다가 다시 들어오지 않는다</li>
-          </ul>
+    <p class="sec"><span class="n">03</span>문제 분석과 인사이트</p>
+
+    <div class="body lms-analysis">
+      <!-- 왼쪽: 문제 정의 및 데이터 -->
+      <div class="analysis-left">
+        <div class="analysis-block">
+          <span class="lab">고민 포인트</span>
+          <div class="question-list">
+            <div><b>Q1</b><span>경쟁사와 차별점을 줄 수 있는 서비스는?</span></div>
+            <div><b>Q2</b><span>3,000개 콘텐츠를 편하게 탐색하는 방법은?</span></div>
+            <div><b>Q3</b><span>학습자는 왜 이탈할까?</span></div>
+          </div>
         </div>
-        <div class="card"><h4>이탈 포인트 확인</h4>
-          <div class="chips" style="margin-top:.2cqw;"><span>메인 화면에서 이탈</span><span>영상 도중 이탈</span><span>서버가 멈추며 이탈</span></div>
+
+        <div class="analysis-block">
+          <h3 class="h">기존 LMS 불편 요소</h3>
+          <div class="bars">
+            <div class="bar hl2">
+              <span>불편한 UI</span>
+              <span class="track"><i style="width:100%"></i></span>
+              <span class="val">51</span>
+            </div>
+            <div class="bar">
+              <span>불편한 검색</span>
+              <span class="track"><i style="width:45%"></i></span>
+              <span class="val">23</span>
+            </div>
+            <div class="bar">
+              <span>영상 끊김</span>
+              <span class="track"><i style="width:31%"></i></span>
+              <span class="val">16</span>
+            </div>
+            <div class="bar">
+              <span>실습환경 미비</span>
+              <span class="track"><i style="width:29%"></i></span>
+              <span class="val">15</span>
+            </div>
+            <div class="bar">
+              <span>콘텐츠 품질</span>
+              <span class="track"><i style="width:10%"></i></span>
+              <span class="val">5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mini-kpi">
+          <span>최초 인입 <b>320명</b></span>
+          <span>중도 포기 <b>40명</b></span>
+          <span>최종 수료 <b>131명</b></span>
+        </div>
+      </div>
+
+      <!-- 오른쪽: 리서치 결과 및 인사이트 -->
+      <div class="analysis-right">
+        <div class="analysis-block">
+          <span class="lab">CS 데이터 분석 · 교육 담당자 인터뷰</span>
+          <div class="card">
+            <ul class="dots">
+              <li>3,000개 콘텐츠가 카테고리별로 정리되지 않아 탐색이 어려움</li>
+              <li>무엇을 봐야 할지 몰라 영상을 고르는 과정에서 피로감 발생</li>
+              <li>교육 내용이 어려워 외부 검색 후 강의로 돌아오지 않음</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="analysis-block">
+          <h3 class="h">주요 이탈 지점</h3>
+          <div class="chips">
+            <span>메인 화면에서 이탈</span>
+            <span>영상 도중 이탈</span>
+            <span>서버 오류로 이탈</span>
+          </div>
+        </div>
+
+        <div class="insight-box">
+          <h3>Pain Point</h3>
+          <p>복잡한 UI, 불편한 검색, 학습 중 질문 해결의 어려움</p>
+
+          <h3>Needs</h3>
+          <p>콘텐츠를 쉽게 고르고, 강의를 벗어나지 않고 질문하기</p>
+
+          <h3>기획 인사이트</h3>
+          <div class="chips">
+            <span>탐색 피로도 해소</span>
+            <span>강의 내 질문</span>
+            <span>정보 피로도 완화</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <span class="proj-tag">Project 02 · 데이원컴퍼니 신규 LMS</span><span class="pgn"></span>
+
+  <span class="proj-tag">Project 02 · 데이원컴퍼니 신규 LMS</span>
+  <span class="pgn"></span>
 </section>
 
-<section class="slide" aria-label="LMS 설문 분석과 인사이트">
-  <div class="inner">
-    <p class="sec"><span class="n">05</span>설문 분석과 인사이트</p>
-    <div class="body c2">
-      <div>
-        <p class="chart-t">기존 LMS 불편한 점 설문 결과 (응답 수)</p>
-        <div class="bars">
-          <div class="bar hl2"><span>불편한 UI</span><span class="track"><i style="width:100%"></i></span><span class="val">51</span></div>
-          <div class="bar"><span>불편한 검색</span><span class="track"><i style="width:45%"></i></span><span class="val">23</span></div>
-          <div class="bar"><span>영상 끊김</span><span class="track"><i style="width:31%"></i></span><span class="val">16</span></div>
-          <div class="bar"><span>실습환경 미비</span><span class="track"><i style="width:29%"></i></span><span class="val">15</span></div>
-          <div class="bar"><span>콘텐츠 품질</span><span class="track"><i style="width:10%"></i></span><span class="val">5</span></div>
-        </div>
-        <p class="chart-t" style="margin-top:1.8cqw;">기존 LMS 수강생 수료 현황 (명)</p>
-        <div class="bars">
-          <div class="bar"><span>최초 인입</span><span class="track"><i style="width:100%"></i></span><span class="val">320</span></div>
-          <div class="bar"><span>중도 포기</span><span class="track"><i style="width:12.5%"></i></span><span class="val">40</span></div>
-          <div class="bar hl2"><span>최종 수료</span><span class="track"><i style="width:41%"></i></span><span class="val">131</span></div>
-        </div>
-      </div>
-      <div style="display:grid;gap:1.2cqw;align-content:start;">
-        <div class="card y"><h4>Pain Point</h4><p>UI가 복잡하고, 검색이 불편하며, 막힐 때 질문할 곳이 없습니다.</p></div>
-        <div class="card y"><h4>Needs</h4><p>무엇을 들을지 쉽게 고르고, 강의를 벗어나지 않고 질문하고 싶습니다.</p></div>
-        <div class="card y"><h4>Keyword</h4><div class="chips" style="margin-top:.4cqw;"><span>탐색 피로도 해소</span><span>강의 안에서 질문</span><span>정보 피로도 완화</span></div></div>
-      </div>
-    </div>
-  </div>
   <span class="proj-tag">Project 02 · 데이원컴퍼니 신규 LMS</span><span class="pgn"></span>
 </section>
 
