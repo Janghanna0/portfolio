@@ -697,6 +697,24 @@
 .tdoc-one img{ width:100%; height:auto; border:0; background:none; border-radius:0; flex:none; }
 .tdoc-one .caps{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:.6cqw; text-align:center; font-weight:900; font-size:1.05em; }
 .tdoc-one .caps span{ justify-self:center; padding:.1cqw 1.2cqw; border-radius:999px; background:var(--y); }
+  /* 추진 당위성: 문제 박스 → 해결 박스 */
+.why3{ margin-top:1.8cqw; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.6cqw; flex:none; }
+.why{ min-width:0; display:flex; flex-direction:column; }
+.why h4{ font-size:1.3em; font-weight:900; line-height:1.4; padding-bottom:.6cqw; margin-bottom:.9cqw; border-bottom:3px solid var(--ink); }
+.why .tag{ display:inline-block; font-size:.82em; font-weight:900; padding:.05cqw .8cqw; border-radius:3px; margin-bottom:.4cqw; }
+.why .prob{ flex:1; background:var(--paper); border-radius:8px; padding:1.1cqw 1.3cqw; }
+.why .prob .tag{ background:var(--warn); color:var(--red); }
+.why .go{ text-align:center; font-size:1.3em; font-weight:900; line-height:1; margin:.5cqw 0; color:var(--y-deep); }
+.why .sol{ flex:1; background:var(--y); border-radius:8px; padding:1.1cqw 1.3cqw; font-weight:700; }
+.why .sol .tag{ background:var(--ink); color:#fff; }
+.why b{ font-weight:900; background:linear-gradient(transparent 60%, rgba(255,255,255,.65) 60%); }
+.why .prob b{ background:linear-gradient(transparent 60%, var(--y) 60%); }
+.funnel{ margin-top:2.8cqw; text-align:center; }
+.funnel p{ font-weight:700; margin-bottom:.9cqw; }
+.funnel .row{ display:flex; justify-content:center; align-items:center; gap:1cqw; flex-wrap:wrap; }
+.funnel .row span{ border:2px solid var(--ink); border-radius:999px; padding:.35cqw 1.4cqw; font-weight:900; background:#fff; }
+.funnel .row i{ font-style:normal; font-weight:900; color:var(--y-deep); }
+@media (max-width:820px){ .why3{ grid-template-columns:1fr; gap:18px; } .why .prob, .why .sol{ padding:12px 14px; } }
 </style>
 </head>
 <body>
@@ -1204,7 +1222,7 @@
         <div><dt>Period</dt><dd>2025.06 ~ 2025.11</dd></div>
       </dl>
     </div>
-    <div class="right"><img src="ihttps://janghanna0.github.io/portfolio/dorctor.png" alt="텃밭닥터 홈 화면과 앱 아이콘"></div>
+    <div class="right"><img src="https://janghanna0.github.io/portfolio/dorctor.png" alt="텃밭닥터 홈 화면과 앱 아이콘"></div>
   </div>
   <span class="pgn"></span>
 </section>
@@ -1236,7 +1254,7 @@
     <p class="sec"><span class="n">02</span>데스크리서치</p>
     <div class="body c2">
       <div>
-        <p style="font-size:1.2em;font-weight:900;margin-bottom:1cqw;">참여자는 해마다 늘었지만, <span class="hl">대부분이 초보로</span>중도포기율 높음</p>
+        <p style="font-size:1.2em;font-weight:900;margin-bottom:1cqw;">참여자는 해마다 늘지만, <span class="hl">대부분 초보로</span>중도포기</p>
         <p class="chart-t">도시농장 참여자 수 (명)</p>
         <div class="bars">
           <div class="bar"><span>2017</span><span class="track"><i style="width:82%"></i></span><span class="val">2,121</span></div>
@@ -1282,10 +1300,20 @@
 <section class="slide" aria-label="텃밭닥터 해결 설계">
   <div class="inner">
     <p class="sec"><span class="n">04</span>해결 설계: AS-IS → TO-BE</p>
-    <div class="body c2">
-      <div style="display:grid;gap:1.2cqw;align-content:start;">
-        <div class="pair"><div class="p"><b>AS-IS</b>무분별한 이미지 분석 / 작물 직접 선택 / 진단 후 소통 단절</div><div class="s"><b>TO-BE</b>사진 한 장으로 작물 자동 인식, 챗봇이 추가 질문 / 키우는 과정을 일기처럼 기록 / 성장 기록과 대화 자동 저장 / 물·영양제 주기 푸시 알림</div></div>
-        <div class="card y"><h4>경쟁 서비스와 다른 점</h4><p>작물 자동 인식, 유효성 검증, 대화형 상담이 하나의 진단 플로우로 이어지게 설계해 구조적인 이탈 방지 장치를 만들었습니다.</p></div>
+    <div class="body tdoc-solve">
+      <div class="tdoc-left">
+        <div class="asis"><span class="tag">AS-IS</span>
+          <p>1.무분별한 이미지 분석<br>2.작물 직접 선택<br>3.진단 후 소통 단절</p>
+        </div>
+        <p class="go">↓</p>
+        <div class="tobe"><span class="tag">TO-BE</span>
+            <br>1.사진 한 장</b>으로 작물 자동 인식
+            <br>2.키우는 과정을 <b>일기처럼 기록</b><
+            <br>3.성장 기록과 대화 내용 <b>자동 저장</b>
+            <br>4.물·영양제 주기 등 맞춤형 <b>푸시 알림</b></p>
+          </ul>
+        </div>
+        <p class="diff"><b>경쟁 서비스와 다른 점</b><br>작물 자동 인식 → 유효성 검증 → 대화형 상담을 <b>하나의 진단 플로우</b>로 이어 구조적인 이탈 방지</p>
       </div>
         <div class="tdoc-one">
         <img src="https://janghanna0.github.io/portfolio/doctor.png" alt="텃밭닥터 AI 챗봇, 생육일지 쓰기, 달력형 아카이빙 화면">
@@ -1303,9 +1331,9 @@
     <div class="body" style="grid-template-rows:1fr auto;">
       <figure><img src="https://janghanna0.github.io/portfolio/flow.png" alt="텃밭닥터 최종 유저 플로우 차트"></figure>
       <div class="c3" style="display:grid;gap:1.2cqw;">
-        <div class="card y"><h4>시장의 진짜 문제를 데이터로 정의</h4><p>참여자 대부분이 초보이고 1년 안에 이탈한다는 데이터에서 출발했습니다.</p></div>
-        <div class="card y"><h4>경쟁사가 놓친 페인포인트를 기술로 해결</h4><p>진단부터 대화형 상담까지 이어지는 플로우를 설계했습니다.</p></div>
-        <div class="card y"><h4>작동하는 MVP로 증명</h4><p>5인 팀에서 기획을 주도했고, 발표와 라이브 시연이 가능한 MVP를 구현했습니다.</p></div>
+        <div class="card y"><h4>시장의 진짜 문제를 데이터로 정의</h4><p>참여자 대부분이 초보이고 1년 안에 이탈한다는 데이터에서 출발</p></div>
+        <div class="card y"><h4>경쟁사가 놓친 페인포인트를 기술로 해결</h4><p>진단부터 대화형 상담까지 이어지는 플로우를 설계</p></div>
+        <div class="card y"><h4>작동하는 MVP로 증명</h4><p>5인 팀에서 기획을 주도했고, 발표와 라이브 시연이 가능한 MVP를 구현</p></div>
       </div>
     </div>
   </div>
@@ -1334,7 +1362,7 @@
     <p class="sec"><span class="n">01</span>사용자 조사 (FGI)</p>
     <div class="body c2">
       <div style="display:grid;gap:1.2cqw;align-content:start;">
-        <p class="dim">20대와 40대 이상 소비자 10명을 대상으로 요기요에 대한 인식과 이용 행태를 조사했습니다.</p>
+        <p class="dim">20대와 40대 이상 소비자 10명을 대상으로 요기요에 대한 인식과 이용 행태를 조사했</p>
         <div class="card"><h4>40대 이상</h4><p><b>인지도</b> 낮음 · <b>이용 경험</b> 거의 없음<br><span class="hl">"요기요라는 이름 자체를 잘 모른다"</span></p></div>
         <div class="card"><h4>20대</h4><p><b>인지도</b> 높음 · <b>이용 경험</b> 배달의민족·쿠팡이츠 위주<br><span class="hl">"굳이 요기요를 사용할 이유를 모르겠다"</span></p></div>
       </div>
@@ -1365,7 +1393,7 @@
         <p class="note dim" style="margin-top:.6cqw;">출처: 모바일인덱스 · 시장점유율 약 12~14%로 3위, 배달의민족·쿠팡이츠 양강 체제</p>
       </div>
       <div style="display:grid;gap:1.2cqw;align-content:start;">
-        <div class="card y"><h4>사주 콘텐츠 시장은 커지고 있습니다</h4>
+        <div class="card y"><h4>사주 콘텐츠 시장은 계속해서 성장 중</h4>
           <ul class="dots">
             <li>국내 점술·운세 시장 약 1.4조 원 (2024, 혁신의숲)</li>
             <li>점신 누적 다운로드 1,700만 건</li>
@@ -1388,7 +1416,7 @@
       <div class="card"><span class="lab">AI 사주</span><h4>청월당, 타이트사주</h4><p>청월당은 매출 기준 한국 1위 사주 운세 회사이고 월간 이용자 100만 명 이상입니다. 타이트사주는 누적 이용자 100만 명 이상입니다.</p></div>
     </div>
     <div class="chips" style="margin-top:1.8cqw;"><span>이디야커피 오행 이벤트</span><span>바나프레소 컵 라벨 '오늘의 운세'</span><span>국내 첫 운세 박람회 사전 신청 1만 명</span></div>
-    <p style="margin-top:2.6cqw;font-size:1.3em;font-weight:900;text-align:center;">운세·진단 콘텐츠가 <span class="hl">트래픽과 구매 전환</span>으로 이어진다는 점은 이미 검증되어 있습니다</p>
+    <p style="margin-top:2.6cqw;font-size:1.3em;font-weight:900;text-align:center;">운세·진단 콘텐츠가 <span class="hl">트래픽과 구매 전환</span>으로 이어진다는 점은 이미 검증되어 있다</p>
   </div>
   <span class="proj-tag">Project 04 · 요기요 역기획 · 요기사주</span><span class="pgn"></span>
 </section>
