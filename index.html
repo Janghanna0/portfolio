@@ -420,6 +420,31 @@
     .slide{ break-after:page; border-radius:0; box-shadow:none; width:100vw; }
     .cover-dark .inner, .pc .inner, .hl, .lab, .big .u, .bar .track i, ol.flow li::before, .card, .pair > div, .steps > div, .toc a::before{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   }
+  
+/* LMS 리서치 레이아웃 */
+.lms-research-body {
+  grid-template-rows: 0.65fr 1fr;
+  gap: 1.2cqw;
+}
+
+.lms-research-body > .card:not(.y) {
+  padding: 1cqw 1.4cqw;
+}
+
+.lms-research-body > .card.y {
+  padding: 1.6cqw 1.8cqw;
+}
+
+.lms-research-body > .card.y h4 {
+  font-size: 1.4em;
+  margin-bottom: 1cqw;
+}
+
+.lms-research-body > .card.y .c4 p {
+  font-size: 1.12em;
+  line-height: 1.7;
+}
+
 </style>
 </head>
 <body>
@@ -723,7 +748,7 @@
 <section class="slide" aria-label="LMS 리서치">
   <div class="inner">
     <p class="sec"><span class="n">02</span>리서치</p>
-    <div class="body c3" style="grid-template-rows:1fr auto;">
+    <div class="body c3 lms-research-body">
       <div class="card"><span class="lab">대학교 LMS</span><h4>각종 대학교 LMS</h4><p> 기본 제공 서비스, 웹 UI </p></div>
       <div class="card"><span class="lab">콘텐츠 나열</span><h4>넷플릭스</h4><p>3,000개의 콘텐츠가 있다는 점이 유사해 넷플릭스 UI 참고 </p></div>
       <div class="card"><span class="lab">B2B 직무 교육</span><h4>코드잇, 스파르타</h4><p>B2B 직무 교육 시스템의 기타 기능과 서비스</p></div>
