@@ -48,6 +48,20 @@
   .meta dt{ font-size:.82em; color:var(--gray); } .meta dd{ font-weight:700; line-height:1.5; }
   .chips{ display:flex; flex-wrap:wrap; gap:.6cqw; margin-top:1cqw; }
   .chips span{ font-size:.9em; font-weight:700; border:1.5px solid var(--ink); border-radius:999px; padding:.15cqw 1cqw; }
+  /* 텃밭닥터 해결 설계: 왼쪽 글 + 오른쪽 사진 2단 */
+.tdoc-solve{ grid-template-columns:.85fr 1.15fr; }
+.tdoc-left{ display:flex; flex-direction:column; gap:.7cqw; min-height:0; }
+.tdoc-left .asis, .tdoc-left .tobe{ border-radius:8px; padding:1cqw 1.3cqw; }
+.tdoc-left .asis{ background:var(--warn); }
+.tdoc-left .tobe{ background:var(--y); font-weight:700; }
+.tdoc-left .tag{ display:inline-block; font-size:.82em; font-weight:900; padding:.05cqw .8cqw; border-radius:3px; margin-bottom:.4cqw; }
+.tdoc-left .asis .tag{ background:#fff; color:var(--red); }
+.tdoc-left .tobe .tag{ background:var(--ink); color:#fff; }
+.tdoc-left ol{ padding-left:1.4em; }
+.tdoc-left li + li{ margin-top:.2cqw; }
+.tdoc-left .go{ text-align:center; font-weight:900; color:var(--y-deep); line-height:1; }
+.tdoc-left .diff{ border:2px solid var(--ink); border-radius:8px; padding:.8cqw 1.2cqw; font-size:.95em; }
+@media (max-width:820px){ .tdoc-solve{ grid-template-columns:1fr; } }
 
   /* 카드 */
   .card{ background:var(--paper); border-radius:8px; padding:1.4cqw 1.6cqw; }
@@ -1290,9 +1304,9 @@
   <div class="inner">
     <p class="sec"><span class="n">03</span>페르소나와 인사이트</p>
     <div class="body c3" style="align-items:start;flex:none;">
-      <div class="card"><h4>주말농장 가족 (농업 초보)</h4><br><p stlye="color:red"><b>Needs</b><br>실패 위험을 줄여 줄 실시간 LLM 진단</p></div>
-      <div class="card"><h4>식물집사 (대학생·직장인)</h4><br><p stlye="color:red"><b>Needs</b><br>키우는 맛을 느끼게 해 줄 게이미피케이션 재배일지</p></div>
-      <div class="card"><h4>초기 귀농인 (청년 농부)</h4><br><p stlye="color:red"><b>Needs</b><br>현장 맞춤형 AI 자문과 간편한 아카이빙 시스템</p></div>
+      <div class="card"><h4>주말농장 가족 (농업 초보)</h4><br><p style="color:red"><b>Needs</b><br>실패 위험을 줄여 줄 실시간 LLM 진단</p></div>
+      <div class="card"><h4>식물집사 (대학생·직장인)</h4><br><p stylee="color:red"><b>Needs</b><br>키우는 맛을 느끼게 해 줄 게이미피케이션 재배일지</p></div>
+      <div class="card"><h4>초기 귀농인 (청년 농부)</h4><br><p style="color:red"><b>Needs</b><br>현장 맞춤형 AI 자문과 간편한 아카이빙 시스템</p></div>
     </div>
     <p style="margin-top:4cqw;font-size:1.6em;font-weight:900;text-align:center;line-height:1.6;">진단만으로는 부족하고, <span class="hl">진단 뒤의 대화와 기록</span>까지 이어져야 합니다</p>
   </div>
@@ -1305,22 +1319,26 @@
     <div class="body tdoc-solve">
       <div class="tdoc-left">
         <div class="asis"><span class="tag">AS-IS</span>
-          <p>1.무분별한 이미지 분석<br>2.작물 직접 선택<br>3.진단 후 소통 단절</p>
+          <ol>
+            <li>무분별한 이미지 분석</li>
+            <li>작물 직접 선택</li>
+            <li>진단 후 소통 단절</li>
+          </ol>
         </div>
         <p class="go">↓</p>
         <div class="tobe"><span class="tag">TO-BE</span>
-            <br>1.사진 한 장</b>으로 작물 자동 인식
-            <br>2.키우는 과정을 <b>일기처럼 기록</b><
-            <br>3.성장 기록과 대화 내용 <b>자동 저장</b>
-            <br>4.물·영양제 주기 등 맞춤형 <b>푸시 알림</b></p>
-          </ul>
+          <ol>
+            <li><b>사진 한 장</b>으로 작물 자동 인식</li>
+            <li>키우는 과정을 <b>일기처럼 기록</b></li>
+            <li>성장 기록과 대화 내용 <b>자동 저장</b></li>
+            <li>물·영양제 주기 등 맞춤형 <b>푸시 알림</b></li>
+          </ol>
         </div>
         <p class="diff"><b>경쟁 서비스와 다른 점</b><br>작물 자동 인식 → 유효성 검증 → 대화형 상담을 <b>하나의 진단 플로우</b>로 이어 구조적인 이탈 방지</p>
       </div>
-        <div class="tdoc-one">
+      <div class="tdoc-one">
         <img src="https://janghanna0.github.io/portfolio/doctor.png" alt="텃밭닥터 AI 챗봇, 생육일지 쓰기, 달력형 아카이빙 화면">
         <div class="caps"><span>챗봇</span><span>생육일지</span><span>아카이빙</span></div>
-      </div>
       </div>
     </div>
   </div>
