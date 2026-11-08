@@ -434,6 +434,34 @@
     .slide{ break-after:page; border-radius:0; box-shadow:none; width:100vw; }
     .cover-dark .inner, .pc .inner, .hl, .lab, .big .u, .bar .track i, ol.flow li::before, .card, .pair > div, .steps > div, .toc a::before{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   }
+  /* 텃밭닥터: 시장 조사 + 페르소나 합친 슬라이드 */
+.rp3 .shr{ margin-top:.6cqw; }
+.rp3 .shr .t{ display:flex; justify-content:space-between; font-size:.84em; color:var(--gray); margin-bottom:.2cqw; }
+.rp3 .shr .t b{ color:var(--ink); }
+.rp3 .shr .bar2{ display:flex; height:1.7cqw; border-radius:3px; overflow:hidden; background:#E6E6E2; }
+.rp3 .shr .bar2 i{ display:flex; align-items:center; padding-left:.7cqw; background:var(--ink); color:#fff; font-style:normal; font-weight:900; font-size:.82em; }
+.rp3 table.yr td, .rp3 table.yr th{ text-align:center; }
+.rp3 table.yr td:first-child{ white-space:normal; }
+
+/* 텃밭닥터 해결 설계: 사진이 잘리지 않는 레이아웃 */
+.tdoc-solve{ grid-template-columns:.85fr 1.15fr; }
+.tdoc-left{ display:flex; flex-direction:column; gap:.7cqw; min-height:0; }
+.tdoc-left .asis, .tdoc-left .tobe{ border-radius:8px; padding:1cqw 1.3cqw; }
+.tdoc-left .asis{ background:var(--warn); }
+.tdoc-left .tobe{ background:var(--y); font-weight:700; }
+.tdoc-left .tag{ display:inline-block; font-size:.82em; font-weight:900; padding:.05cqw .8cqw; border-radius:3px; margin-bottom:.4cqw; }
+.tdoc-left .asis .tag{ background:#fff; color:var(--red); }
+.tdoc-left .tobe .tag{ background:var(--ink); color:#fff; }
+.tdoc-left ul, .tdoc-left ol{ padding-left:1.4em; }
+.tdoc-left li + li{ margin-top:.2cqw; }
+.tdoc-left .go{ text-align:center; font-weight:900; color:var(--y-deep); line-height:1; }
+.tdoc-left .diff{ border:2px solid var(--ink); border-radius:8px; padding:.8cqw 1.2cqw; font-size:.95em; }
+
+/* 텃밭닥터: 한 장짜리 화면 이미지 + 순서대로 설명 */
+.tdoc-one{ min-width:0; min-height:0; display:flex; flex-direction:column; justify-content:center; }
+.tdoc-one img{ width:100%; height:auto; border:0; background:none; border-radius:0; flex:none; }
+.tdoc-one .caps{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:.6cqw; text-align:center; font-weight:900; font-size:1.05em; }
+.tdoc-one .caps span{ justify-self:center; padding:.1cqw 1.2cqw; border-radius:999px; background:var(--y); }
   
 /* LMS Before & After 비교 */
 .ba-intro {
@@ -1022,15 +1050,15 @@
         <p style="font-weight:900;font-size:1.1em;line-height:1.55;">
           매일의 참여 목표와 보상까지의 진행 상황을 한눈에 확인하도록
           <span class="hl">인증 현황과 연속 인증</span>을 강조하고,
-          <span class="hl">선물 교환 기준</span>으로 목표를 시각화했습니다.
+          <span class="hl">선물 교환 기준</span>UI 구성을
         </p>
         <div class="card y">
           <h4>인증·포인트 목표 설정</h4>
-          <p>매일 인증과 댓글 작성 등 핵심 행동을 목표로 제시하고, 나다움 포인트 목표를 설정해 지속적인 참여를 유도했습니다.</p>
+          <p>매일 인증과 댓글 작성 등 핵심 행동을 미션으로 제시, 리텐션 강화를 위한 목표 가시화</p>
         </div>
         <div class="card y">
           <h4>달성 현황 및 연속 인증 관리</h4>
-          <p>마이페이지의 정보 위계를 재구성하고, 인증 현황과 연속 참여 이력을 확인할 수 있는 캘린더를 추가했습니다.</p>
+          <p>마이페이지의 정보 위계를 재구성하고, 인증 현황과 연속 참여 이력을 확인할 수 있는 캘린더를 추가</p>
         </div>
       </div>
       <figure>
@@ -1089,28 +1117,27 @@
   
 <section class="slide" aria-label="유스잇 성과">
   <div class="inner">
-    <p class="sec"><span class="n">05</span>성과: 과제별 개선안 적용 결과</p>
+    <p class="sec"><span class="n">05</span>성과: 개선안 구현과 커뮤니티 활성화 신호</p>
     <div class="body rp3">
-      <p class="msg">발견한 두 가지 문제를 <b>개선안으로 설계</b>하고 <b>PWA로 구현</b>, 개선 효과는 지표로 측정</p>
+      <p class="msg">문제 2건을 개선안으로 설계해 <b>PWA로 구현</b> → 커뮤니티는 게시물당 댓글 <b>1개 → 약 5개</b>로 활성화 신호 확인</p>
       <div>
         <h5>산출물</h5>
         <div class="tiles">
           <div>PWA 구축<small>서비스 구현</small></div>
           <div>UI Kit · GUI · BI<small>디자인 시스템</small></div>
-          <div>MVP 기반 심층 설문<small>효과 검증</small></div>
+          <div>MVP 기반 심층 설문<small>사용성 검증</small></div>
           <div>개선안 제작<small>문제 1 · 2 대응</small></div>
         </div>
       </div>
       <div>
-        <h5>과제별 개선 결과</h5>
+        <h5>과제별 성과</h5>
         <table>
-          <thead><tr><th>과제</th><th>발견한 문제</th><th>개선 내용</th><th>측정 지표</th><th>개선 전</th><th class="key">개선 후</th></tr></thead>
+          <thead><tr><th>과제</th><th>문제 → 개선</th><th>지표</th><th>개선 전</th><th class="key">개선 후</th></tr></thead>
           <tbody>
-            <tr><td>성과 가시화</td><td>참여가 리워드에 쏠림, 내 성과를 볼 곳 없음</td><td>홈 목표 설정(선물 기준), 인증 캘린더</td><td><span class="ph-in">[지표]</span></td><td><span class="ph-in">[ ]</span></td><td class="key"><span class="ph-in">[ ]</span></td></tr>
-            <tr><td>커뮤니티 활성화</td><td>커뮤니티 비활성, 익명·실명 딜레마</td><td>닉네임 + 실명 확인, 블라인드·금칙어</td><td><span class="ph-in">[지표]</span></td><td><span class="ph-in">[ ]</span></td><td class="key"><span class="ph-in">[ ]</span></td></tr>
+            <tr><td>성과 가시화</td><td>참여가 리워드에 쏠림 → <b>홈 목표 설정, 인증 캘린더</b></td><td>정량 지표 없음</td><td>자신의 성과 확인 불가</td><td class="key"><b>성과·목표 화면 신규 구축</b><br><span class="ph-in">유저 반응: "미션을 해결하는게 재밌다"</span></td></tr>
+            <tr><td>커뮤니티 활성화</td><td>커뮤니티 비활성, 익명·실명 딜레마 → <b>닉네임 + 실명 확인, 블라인드·금칙어</b></td><td>게시물당 댓글</td><td>1개 <small>(운영자 작성)</small></td><td class="key"><b>약 5개</b></td></tr>
           </tbody>
         </table>
-        <p class="note" style="margin-top:.5cqw;">※ 측정 기준: <span class="ph-in">[조사 방식·기간·표본 수]</span></p>
       </div>
     </div>
   </div>
@@ -1123,7 +1150,7 @@
     <div class="left">
       <p class="pno">Project 02. 교육 플랫폼 기획</p>
       <h2>패스트캠퍼스<br>신규 LMS 기획</h2>
-      <p class="one">낮은 수료율의 원인을 학습자 여정에서 찾고,<br>학습자 입장의 편의성을 최우선 가치로 설계했습니다.</p>
+      <p class="one">낮은 수료율의 원인을 데이터에서 찾고,<br>학습자 입장의 편의성을 최우선 가치로 설계</p>
       <dl>
         <div><dt>Role</dt><dd>PM · 기능정의, UI/UX 설계, LLM 핵심 기능 정의 및 정책 수립</dd></div>
         <div><dt>Team</dt><dd>백엔드 2, PM 2 </dd></div>
@@ -1139,7 +1166,7 @@
   <div class="inner">
     <p class="sec"><span class="n">01</span>배경</p>
     <div class="body" style="grid-template-rows:auto auto auto;align-content:center;">
-      <p style="font-size:1.5em;font-weight:900;line-height:1.5;">고객 수는 늘었지만, <span class="hl">낮은 수료율</span>과 <span class="hl">짧은 체류 시간</span>이 이어졌습니다</p>
+      <p style="font-size:1.5em;font-weight:900;line-height:1.5;">고객 수는 늘었지만, <span class="hl">낮은 수료율</span>과 <span class="hl">짧은 체류 시간</span>이라는 문제 발견</p>
       <div class="c3" style="display:grid;gap:1.4cqw;">
         <div class="kpi"><p class="big"><span class="u">평균 2.5점</span><small>기존 LMS 사용 만족도 조사</small></p></div>
         <div class="kpi"><p class="big"><span class="u">1시간 미만</span><small>평균 체류 시간</small></p></div>
@@ -1147,7 +1174,7 @@
       </div>
       <div class="card y" style="align-self:start;">
         <h4>기획 목표</h4>
-        <p>B2B 수강생 증가에도 낮은 수료율, 잦은 CS로 기능 미비에 대한 문제 인식 <br> 학습자 입장에서의 편의성을 최우선 가치로 두고, 수료율을 끌어올리는 실전형 학습 플랫폼 구축을 목표로 설정 </p>
+        <p>B2B 수강생 증가에도 낮은 수료율, 잦은 CS로 기능 미비에 대한 문제 인식 <br> 학습자의 편의성을 위한 AI기능 도입, UI 개선을 목표로 설정 </p>
       </div>
     </div>
   </div>
@@ -1275,7 +1302,7 @@
     <p class="sec"><span class="n">04</span>UI/UX 개선 결과</p>
 
     <p class="ba-intro">
-      학습 과정의 불편함을 줄이고, <span class="hl">직관적인 학습 경험</span>을 설계했습니다.
+      학습 과정의 불편함을 줄이고, <span class="hl">직관적인 학습 경험</span>을 설계
     </p>
 
     <div class="ba-grid">
@@ -1316,9 +1343,9 @@
   <div class="inner">
     <p class="sec"><span class="n">05</span>신규 추가: 세 가지 기능</p>
     <div class="body c3" style="grid-template-rows:auto 1fr;">
-      <div class="pair"><div class="p"><b>문제</b>수강 정보가 '주제'밖에 없어 강의를 고르기 어려웠습니다.</div><div class="s"><b>정보요약 AI</b>강의별 난이도와 핵심 내용을 AI가 정리해 탐색 피로도를 줄임</div></div>
-      <div class="pair"><div class="p"><b>문제</b>강의 화면을 벗어나면 질문을 해결하기 어려웠습니다.</div><div class="s"><b>강의 내 챗봇</b>화면을 벗어나지 않고 질문, 토큰 수로 횟수 제한까지 표현 </div></div>
-      <div class="pair"><div class="p"><b>문제</b>맞춤형 커리큘럼이 없어 어떤 루트로 들어야할지 어려웠습니다. </div><div class="s"><b>커리큘럼 페이지</b>니즈 입력시 맞춤형 커리큘럼을 짜주는 뽑기 페이지로 나만의 커리큘럼 완성</div></div>
+      <div class="pair"><div class="p"><b>문제</b>수강 정보가 '주제'밖에 없어 강의를 고르기 어렵다/div><div class="s"><b>정보요약 AI</b>강의별 난이도와 핵심 내용을 AI가 정리해 탐색 피로도를 줄임</div></div>
+      <div class="pair"><div class="p"><b>문제</b>강의 내용의 의문이 생기면 외부 검색이 필수 </div><div class="s"><b>강의 내 챗봇</b>화면을 벗어나지 않고 질문, 토큰 수로 횟수 제한까지 표현 </div></div>
+      <div class="pair"><div class="p"><b>문제</b>맞춤형 커리큘럼이 없어 수강에 어려움을 겪음 </div><div class="s"><b>커리큘럼 페이지</b>니즈 입력시 맞춤형 커리큘럼을 짜주는 뽑기 페이지로 나만의 커리큘럼 완성</div></div>
       <figure><img src="https://janghanna0.github.io/portfolio/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202026-10-26%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%203.43.19.png" alt="AI가 강의 난이도와 핵심 내용을 요약한 화면"></figure>
       <figure><img src="https://janghanna0.github.io/portfolio/ai.png" alt="강의 내 챗봇과 남은 토큰 수 표시"></figure>
       <figure><img src="https://janghanna0.github.io/portfolio/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202026-07-28%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.16.47.png" alt="차시를 하나의 강의로 묶은 슬라이더 화면"></figure>
@@ -1356,7 +1383,7 @@
     <div class="left">
       <p class="pno">Project 03. AI 서비스 기획 (팀 프로젝트)</p>
       <h2>내 손위의 식물 의사<br>텃밭닥터</h2>
-      <p class="one">초보 도시 농부가 재배에 실패해 중도 포기하는 문제를<br>앱으로 해결했습니다. </p>
+      <p class="one">초보 도시 농부가 재배에 실패해 중도 포기하는 문제를<br>앱으로 해결 </p>
       <dl>
         <div><dt>Role</dt><dd>PM, 팀장 · UI/UX 설계, 주제 선정, 시장 조사, 기획서 작성</dd></div>
         <div><dt>Team</dt><dd>기획자 1, 백엔드 2, 프론트엔드 1, AI 엔지니어 1</dd></div>
@@ -1390,55 +1417,53 @@
   <span class="proj-tag">Project 03 · 텃밭닥터</span><span class="pgn"></span>
 </section>
 
-<section class="slide" aria-label="텃밭닥터 데스크리서치">
+<section class="slide" aria-label="텃밭닥터 시장 조사와 페르소나">
   <div class="inner">
-    <p class="sec"><span class="n">02</span>데스크리서치</p>
-    <div class="body c2">
-      <div>
-        <p style="font-size:1.2em;font-weight:900;margin-bottom:1cqw;">참여자는 해마다 늘지만, <span class="hl">대부분 초보로</span>중도포기</p>
-        <p class="chart-t">도시농장 참여자 수 (명)</p>
-        <div class="bars">
-          <div class="bar"><span>2017</span><span class="track"><i style="width:82%"></i></span><span class="val">2,121</span></div>
-          <div class="bar"><span>2018</span><span class="track"><i style="width:93%"></i></span><span class="val">2,418</span></div>
-          <div class="bar"><span>2019</span><span class="track"><i style="width:99.7%"></i></span><span class="val">2,591</span></div>
-          <div class="bar hl2"><span>2020</span><span class="track"><i style="width:100%"></i></span><span class="val">2,599</span></div>
+    <p class="sec"><span class="n">02</span>시장 조사와 페르소나: 초보 이탈 문제와 사용자 니즈</p>
+    <div class="body rp3">
+      <p class="msg">참여자는 늘었지만 <b>80%가 초보</b>이고 <b>65%가 참여 1년 미만</b> → 진단에 그치지 않고 <b>대화와 기록</b>까지 이어져야 함</p>
+      <div class="grid2" style="grid-template-columns:1fr 1fr;">
+        <div>
+          <h5>데스크리서치: 도시농장 현황</h5>
+          <table class="yr">
+            <thead><tr><th>연도</th><th>2017</th><th>2018</th><th>2019</th><th>2020</th></tr></thead>
+            <tbody><tr><td>참여자(명)</td><td>2,121</td><td>2,418</td><td>2,591</td><td><b>2,599</b></td></tr></tbody>
+          </table>
+          <div class="shr"><div class="t"><span>농업 경험 <b>없음 80%</b></span><span>있음 20%</span></div><div class="bar2"><i style="width:80%">80%</i></div></div>
+          <div class="shr"><div class="t"><span>참여 기간 <b>1년 미만 65%</b></span><span>1년 이상 35%</span></div><div class="bar2"><i style="width:65%">65%</i></div></div>
+        </div>
+        <div>
+          <h5>기존 서비스의 문제점</h5>
+          <table>
+            <thead><tr><th>기존 방식</th><th class="key">영향</th></tr></thead>
+            <tbody>
+              <tr><td>무분별한 이미지 분석</td><td class="key">서버 낭비, <b>유저 이탈</b></td></tr>
+              <tr><td>작물 직접 선택</td><td class="key">초보에게 <b>진입 장벽</b></td></tr>
+              <tr><td>진단 후 소통 단절</td><td class="key">추가 궁금증 <b>해소 불가</b></td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
       <div>
-        <p class="chart-t">참여자 구성 (%)</p>
-        <div class="bars">
-          <div class="bar hl2"><span>경험 없음</span><span class="track"><i style="width:100%"></i></span><span class="val">80</span></div>
-          <div class="bar"><span>경험 있음</span><span class="track"><i style="width:25%"></i></span><span class="val">20</span></div>
-          <div class="bar hl2"><span>1년 미만</span><span class="track"><i style="width:81%"></i></span><span class="val">65</span></div>
-          <div class="bar"><span>1년 이상</span><span class="track"><i style="width:44%"></i></span><span class="val">35</span></div>
-        </div>
-        <br>
-        <div class="card y" style="margin-top:1.6cqw;"><h4>기존 식물인식 서비스 문제점</h4>
-          <ul class="dots">
-            <li><b>무분별한 이미지 분석</b> 서버가 낭비되고 유저가 이탈</li>
-            <li><b>작물 직접 선택</b> 초보에게는 진입 장벽</li>
-            <li><b>진단 후 소통 단절</b> 추가 궁금증을 해소할 수 없음</li>
-          </ul>
-        </div>
+        <h5>페르소나와 니즈</h5>
+        <table>
+          <thead><tr><th>페르소나</th><th>구분</th><th class="key">Needs</th></tr></thead>
+          <tbody>
+            <tr><td>주말농장 가족</td><td>농업 초보</td><td class="key">실패 위험을 줄여 줄 <b>실시간 LLM 진단</b></td></tr>
+            <tr><td>식물집사</td><td>대학생·직장인</td><td class="key">키우는 맛을 느끼게 해 줄 <b>게이미피케이션 재배일지</b></td></tr>
+            <tr><td>초기 귀농인</td><td>청년 농부</td><td class="key">현장 맞춤형 <b>AI 자문</b>, 간편한 <b>아카이빙</b> 시스템</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="fun">
+        <div class="lbl">도출 방향<small>진단 + 대화 + 기록</small></div>
+        <div class="st"><span class="mk">AI 이미지 진단</span></div><i>→</i><div class="st"><span class="mk">대화형 상담</span></div><i>→</i><div class="st"><span class="mk">재배일지 기록</span></div>
       </div>
     </div>
   </div>
   <span class="proj-tag">Project 03 · 텃밭닥터</span><span class="pgn"></span>
 </section>
-
-<section class="slide" aria-label="텃밭닥터 페르소나와 인사이트">
-  <div class="inner">
-    <p class="sec"><span class="n">03</span>페르소나와 인사이트</p>
-    <div class="body c3" style="align-items:start;flex:none;">
-      <div class="card"><h4>주말농장 가족 (농업 초보)</h4><br><p style="color:red"><b>Needs</b><br>실패 위험을 줄여 줄 실시간 LLM 진단</p></div>
-      <div class="card"><h4>식물집사 (대학생·직장인)</h4><br><p stylee="color:red"><b>Needs</b><br>키우는 맛을 느끼게 해 줄 게이미피케이션 재배일지</p></div>
-      <div class="card"><h4>초기 귀농인 (청년 농부)</h4><br><p style="color:red"><b>Needs</b><br>현장 맞춤형 AI 자문과 간편한 아카이빙 시스템</p></div>
-    </div>
-    <p style="margin-top:4cqw;font-size:1.6em;font-weight:900;text-align:center;line-height:1.6;">진단만으로는 부족하고, <span class="hl">진단 뒤의 대화와 기록</span>까지 이어져야 합니다</p>
-  </div>
-  <span class="proj-tag">Project 03 · 텃밭닥터</span><span class="pgn"></span>
-</section>
-
+  
 <section class="slide" aria-label="텃밭닥터 해결 설계">
   <div class="inner">
     <p class="sec"><span class="n">04</span>해결 설계: AS-IS → TO-BE</p>
